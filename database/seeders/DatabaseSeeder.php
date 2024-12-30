@@ -18,11 +18,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // jika mau nambahkan user bisa menambahkan manual dengan un-comment script dibawah
-        // $admin = User::create([
-        //     'name'      => 'Admin',
-        //     'email'     => 'iamAdmin@mail.com',
-        //     'password'  => bcrypt('adminnih'),
-        // ]);
+        $admin = User::create([
+            'name'      => 'Admin',
+            'email'     => 'iamAdmin@mail.com',
+            'password'  => bcrypt('adminnih'),
+        ]);
 
         $this->call(ListPariwisata::class); //memasukkan data list pariwisata
     }

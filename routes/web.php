@@ -23,4 +23,4 @@ route::get('/detail/{id}', [list_pariwisata_controller::class, 'show']);
 // route::get('/json/{id}', [list_pariwisata_controller::class, 'json']);
 
 Route::get('/map', MapLocation::class)->middleware('auth');
-Route::get('/location/{id}', LocationPoint::class);
+Route::get('/location/{id}', MapLocation::class);
