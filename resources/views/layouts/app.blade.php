@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dolan Semarang</title>
+    <title>Objek Wisata Kabupaten Aceh Tengah</title>
 
     {{-- mapbox --}}
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <div class="bg-white w-full flex justify-between h-12 shadow-c6 top-0 fixed z-20 text-black">
         <div class="container my-auto flex justify-between">
             <a href="/" class="cursor-pointer">
-                <div class="font-nunito text-xl font-bold tracking-tighter">Dolan Semarang.</div>
+                <div class="font-nunito text-xl font-bold tracking-tighter">Visit Gayo.</div>
             </a>
             <form action="{{route('logout')}}" method="post">
             @csrf
@@ -49,7 +49,7 @@
     </div>
 
     {{-- footer --}}
-    <div class="w-full text-center bg-gray-c2 text-xs font-normal text-black-c1 p-5">Copyright &#169; 2022</div>
+    <div class="w-full text-center bg-gray-c2 text-xs font-normal text-black-c1 p-5">Copyright &#169; 2025</div>
   
 
     @livewireScripts

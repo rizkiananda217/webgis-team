@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Dolan Semarang</title>
+  <title>Object Wisata Kabupaten Aceh Tengah</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{-- tailwind css --}}
@@ -13,7 +13,7 @@
     <nav class="nav bg-transparant w-full flex justify-between h-12 top-0 fixed z-20 text-white">
       <div class="container my-auto flex justify-between">
           <a href="/" class="cursor-pointer">
-              <div class="font-nunito text-xl font-bold tracking-tighter">Dolan Semarang.</div>
+              <div class="font-nunito text-black text-xl font-bold tracking-tighter">Visit Gayo.</div>
           </a>
 
           @if (Auth::user())
@@ -41,12 +41,12 @@
 
     {{-- section hero --}}
     <div class="relative h-[570px]">
-      <img alt="semarang" src="img/hero.jpg" class="absolute w-full h-[570px] object-cover"/>
+      <img alt="semarang" src="img/backgroud.jpg" class="absolute w-full h-[570px] object-cover"/>
       <div class="bg-white/10 absolute w-full h-[570px]">
         <div class="container pt-48 w-full">
-          <div class="font-sans text-3xl font-normal text-white">
-            Hai Kamu, <span class="font-bold">Ayo main di Semarang!</span>
-            <div class="text-sm text-gray-c1 w-2/4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae commodi inventore assumenda eos repellendus rerum corrupti a, cupiditate, atque, deleniti repudiandae dignissimos eum enim sequi dolor nisi corporis aperiam?</div>
+          <div class="font-sans text-3xl font-normal text-black">
+            Hai Kamu, <span class="font-bold">Ayo main di Aceh Tengah!</span>
+            <div class="text-sm text-black w-2/4 mt-4 ">Aceh Tengah adalah sebuah kabupaten di Provinsi Aceh yang dikenal sebagai destinasi wisata alam dan budaya. Wilayah ini terletak di dataran tinggi dengan suasana sejuk dan pemandangan yang memukau. Salah satu daya tarik utamanya adalah Danau Laut Tawar, sebuah danau besar yang dikelilingi oleh perbukitan hijau, menjadikannya ikon utama pariwisata di daerah ini. Selain itu, Aceh Tengah juga dikenal sebagai penghasil kopi Gayo yang mendunia, menarik minat wisatawan untuk mengunjungi kebun-kebun kopi dan menikmati cita rasa autentik dari hasil bumi lokal. Tradisi dan budaya masyarakat Gayo yang unik turut memperkaya pengalaman wisata di Aceh Tengah, menjadikannya tujuan yang menarik bagi pencinta alam, budaya, dan petualangan.</div>
           </div>
           {{-- <button type="button" class="absolute bottom-6 left-[49%] text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="rounded-full w-12 h-12 animate-bounce bg-white/20 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -82,6 +82,7 @@
         </div>
         @endforeach
       </div>
+      hduehdeej
     </div>
     {{--  --}}
 
@@ -103,7 +104,7 @@
     </div>
 
     {{-- footer --}}
-    <div class="w-full text-center bg-gray-c2 text-xs font-normal text-black-c1 p-5">Copyright &#169; 2022</div>
+    <div class="w-full text-center bg-gray-c2 text-xs font-normal text-black-c1 p-5">Copyright &#169; 2025</div>
   
   </div>
 

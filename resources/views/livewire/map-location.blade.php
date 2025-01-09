@@ -94,7 +94,7 @@
 @push('script')
 <script>
     document.addEventListener('livewire:load', () => {
-        const defaultLocation = [110.4228709816665,-6.990393936523219]
+        const defaultLocation = [96.87220233921093, 4.562209194348573] //4.562209194348573, 96.87220233921093
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGZpdHJpYW5hIiwiYSI6ImNsYmc0a3pwejA1dHczcHEzYmJpcG5ndXYifQ.I4HBCvvZH5hHK8zC0-nFTA';
     var map = new mapboxgl.Map({
