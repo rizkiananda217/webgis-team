@@ -68,13 +68,13 @@
         .setLngLat([{{ $pariwisata->longitude }}, {{ $pariwisata->latitude }}])
         .setHTML(`
         <div class="w-[200px] h-[220px] rounded border bg-white">
-              <img alt="{{ $pariwisata->places }}" src="{{ asset("storage/img/$pariwisata->image") }}" class="w-full h-[80px] object-cover rounded-t"/>
-              <div class="mt-2 px-2 font-nunito text-sm text-black-c2 font-semibold line-clamp-1 h-8 hover:text-black-c1">
+            <img alt="{{ $pariwisata->places }}" src="{{ asset("storage/img/$pariwisata->image") }}" class="w-full h-[80px] object-cover rounded-t"/>
+            <div class="mt-2 px-2 font-nunito text-sm text-black-c2 font-semibold line-clamp-1 h-8 hover:text-black-c1">
                 {{ $pariwisata->places }} 
-              </div>
-              <div class="px-2 font-nunito text-xs text-gay-c1 font-normal line-clamp-5">
+            </div>
+            <div class="px-2 font-nunito text-xs text-gay-c1 font-normal line-clamp-5">
                 {{ $pariwisata->deskripsi }} 
-              </div>
+            </div>
         </div>
         `);
 

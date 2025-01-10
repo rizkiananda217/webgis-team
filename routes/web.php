@@ -24,3 +24,7 @@ route::get('/detail/{id}', [list_pariwisata_controller::class, 'show']);
 
 Route::get('/map', MapLocation::class)->middleware('auth');
 Route::get('/location/{id}', MapLocation::class);
+
+Route::delete('/pariwisata/{id}', [list_pariwisata_controller::class, 'destroy'])->name('pariwisata.destroy');
+
+

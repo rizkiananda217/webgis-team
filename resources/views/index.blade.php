@@ -13,7 +13,7 @@
     <nav class="nav bg-transparant w-full flex justify-between h-12 top-0 fixed z-20 text-white">
       <div class="container my-auto flex justify-between">
           <a href="/" class="cursor-pointer">
-              <div class="font-nunito text-black text-xl font-bold tracking-tighter">Visit Gayo.</div>
+              <div class="font-nunito text-white text-xl font-bold tracking-tighter">Visit Gayo</div>
           </a>
 
           @if (Auth::user())
@@ -41,12 +41,12 @@
 
     {{-- section hero --}}
     <div class="relative h-[570px]">
-      <img alt="semarang" src="img/backgroud.jpg" class="absolute w-full h-[570px] object-cover"/>
+      <img alt="semarang" src="img/background.jpg" class="absolute w-full h-[570px] object-cover"/>
       <div class="bg-white/10 absolute w-full h-[570px]">
         <div class="container pt-48 w-full">
-          <div class="font-sans text-3xl font-normal text-black">
+          <div class="font-bold font-sans text-3xl font-normal text-white">
             Hai Kamu, <span class="font-bold">Ayo main di Aceh Tengah!</span>
-            <div class="text-sm text-black w-2/4 mt-4 ">Aceh Tengah adalah sebuah kabupaten di Provinsi Aceh yang dikenal sebagai destinasi wisata alam dan budaya. Wilayah ini terletak di dataran tinggi dengan suasana sejuk dan pemandangan yang memukau. Salah satu daya tarik utamanya adalah Danau Laut Tawar, sebuah danau besar yang dikelilingi oleh perbukitan hijau, menjadikannya ikon utama pariwisata di daerah ini. Selain itu, Aceh Tengah juga dikenal sebagai penghasil kopi Gayo yang mendunia, menarik minat wisatawan untuk mengunjungi kebun-kebun kopi dan menikmati cita rasa autentik dari hasil bumi lokal. Tradisi dan budaya masyarakat Gayo yang unik turut memperkaya pengalaman wisata di Aceh Tengah, menjadikannya tujuan yang menarik bagi pencinta alam, budaya, dan petualangan.</div>
+            <div class="text-sm text-white w-2/4 mt-4 " style="text-align: justify">Aceh Tengah adalah sebuah kabupaten di Provinsi Aceh yang dikenal sebagai destinasi wisata alam dan budaya. Wilayah ini terletak di dataran tinggi dengan suasana sejuk dan pemandangan yang memukau. Salah satu daya tarik utamanya adalah Danau Laut Tawar, sebuah danau besar yang dikelilingi oleh perbukitan hijau, menjadikannya ikon utama pariwisata di daerah ini. Selain itu, Aceh Tengah juga dikenal sebagai penghasil kopi Gayo yang mendunia, menarik minat wisatawan untuk mengunjungi kebun-kebun kopi dan menikmati cita rasa autentik dari hasil bumi lokal. Tradisi dan budaya masyarakat Gayo yang unik turut memperkaya pengalaman wisata di Aceh Tengah, menjadikannya tujuan yang menarik bagi pencinta alam, budaya, dan petualangan.</div>
           </div>
           {{-- <button type="button" class="absolute bottom-6 left-[49%] text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="rounded-full w-12 h-12 animate-bounce bg-white/20 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -61,7 +61,7 @@
     {{-- section destinasi wisata --}}
     <div class="container w-full pt-20 py-36 h-full">
       <div class="text-2xl font-nunito w-full text-black-c2 font-bold">
-        Kunjungi Berbagai Destinasi Menarik
+        Kunjungi Berbagai Wisata Menarik
         <div class="text-sm mt-1 w-2/4 font-normal">
           Mau yang menegangkan? Atau yang bikin relaks? Temuin semuanya di sini.</div>
       </div>
@@ -73,16 +73,24 @@
           </a>
           <a href="/detail/{{$item->id}}" class="cursor-pointer">
             <div class="mt-5 px-5 font-nunito text-lg text-black-c2 font-semibold line-clamp-1 h-10 hover:text-black-c1">
-              {{ $item->places}} 
+              {{ $item->places }} 
             </div>
           </a>
           <div class="px-5 font-nunito text-sm text-black-c2 font-normal line-clamp-5">
-            {{ $item->deskripsi}} 
+            {{ $item->deskripsi }} 
           </div>
+          <!-- Tombol Hapus -->
+          <form action="{{ route('pariwisata.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus destinasi ini?');">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="mt-3 ml-5 px-4 py-2 text-sm text-white bg-red-500 rounded-md hover:bg-red-600">
+              Hapus
+            </button>
+          </form>
         </div>
+        
         @endforeach
       </div>
-      hduehdeej
     </div>
     {{--  --}}
 
@@ -104,7 +112,7 @@
     </div>
 
     {{-- footer --}}
-    <div class="w-full text-center bg-gray-c2 text-xs font-normal text-black-c1 p-5">Copyright &#169; 2025</div>
+    <div class="w-full text-center bg-gray-c2 text-xs font-normal text-black-c1 p-5">VisitGayoGroup &#169; 2025</div>
   
   </div>
 

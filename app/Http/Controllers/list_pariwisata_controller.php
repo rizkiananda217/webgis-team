@@ -15,13 +15,7 @@ class list_pariwisata_controller extends Controller
     public function index()
     {
         $pariwisata = list_pariwisata::get();
-        // dd($pariwisata);
         return \view('index', ['pariwisata' => $pariwisata]);
-    }
-
-    public function json($id){
-        $data = list_pariwisata::where('id', $id)->first();
-        return response()->json(['data' => $data]);
     }
 
     /**
@@ -33,52 +27,7 @@ class list_pariwisata_controller extends Controller
     public function show($id)
     {
         $pariwisata = list_pariwisata::find($id);
-        return \view('detail',['pariwisata' => $pariwisata]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        return \view('detail', ['pariwisata' => $pariwisata]);
     }
 
     /**
@@ -89,6 +38,23 @@ class list_pariwisata_controller extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Cari data wisata berdasarkan ID
+        $pariwisata = list_pariwisata::find($id);
+
+        // Jika data tidak ditemukan
+        if (!$pariwisata) {
+            return redirect()->back()->with('error', 'Data tidak ditemukan.');
+        }
+
+        // Hapus file gambar jika ada
+        if ($pariwisata->image && file_exists(storage_path('app/public/img/' . $pariwisata->image))) {
+            unlink(storage_path('app/public/img/' . $pariwisata->image));
+        }
+
+        // Hapus data dari database
+        $pariwisata->delete();
+
+        // Redirect dengan pesan sukses
+        return redirect()->back()->with('success', 'Destinasi berhasil dihapus.');
     }
 }
